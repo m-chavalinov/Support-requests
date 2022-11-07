@@ -8,8 +8,8 @@ from datetime import datetime
 import time
 
 
-#account 1 - rachelleborowicki / Is486773
-#account 2 - abesilverberg / ^#q6JHwBKERuAcTV
+#account 1 - ******* / ********
+#account 2 - ******* / ********
 # ^ 2 nextiva accounts. Account #2 is used in the automation
 
 nextiva_login = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -17,9 +17,9 @@ nextiva_login.set_window_size(1000, 1000)
 nextiva_login.set_window_position(800, 25, windowHandle='current')
 # ^ Opens nextova windows and sets the window sizes
 
-webbrowser.open("https://docs.google.com/spreadsheets/d/1WbQKONN8P3hfFVttaSS_tLzZJ9QSk7ka6vPUga4AIIQ/edit#gid=0")
+webbrowser.open("https://docs.google.com/spreadsheets/d/1WbQKONN8P3hfFVttaSS_*****/edit#gid=0")
 time.sleep(2)
-webbrowser.open("https://docs.google.com/spreadsheets/d/1tFkhYXIqPUihI5qE-tdonCN2nTDoiOGx9Pzv5S_htr4/edit?pli=1#gid=183854558")
+webbrowser.open("https://docs.google.com/spreadsheets/d/1tFkhYXIqPUihI5qE-******/edit?pli=1#gid=******")
 nextiva_login.get("http://cp3.nextiva.com/callcenter")
 time.sleep(25)
 #  ^ Logs in Google Sheets and opens Nextiva
@@ -27,11 +27,11 @@ time.sleep(25)
 
 search = nextiva_login.find_element('xpath', '//*[@id="isc_N"]')
 time.sleep(3)
-search.send_keys("rachelleborowicki")
+search.send_keys("********")
 time.sleep(1)
 search = nextiva_login.find_element('xpath', '//*[@id="isc_P"]')
 time.sleep(1)
-search.send_keys("Is486773")
+search.send_keys("*******")
 search.send_keys(Keys.RETURN)
 time.sleep(4)
 m = nextiva_login.find_element('xpath', '//*[@id="isc_LinkItem_6$20j"]')
@@ -108,12 +108,6 @@ while True:
         # ^Pastes in Google Sheets
         ################################################
         continue
-
-    # #   18:00     13:05      08:00 Monday/Saturday
-    # #   18:00     23:00      08:00 Monday/Saturday
-    # #   18:00     04:00      08:00 Monday/Saturday
-    # if end_work < now or now < start_work or x == 5 or x == 6:
-    #     continue
 
     # ------------CCCD 9AM - 10AM START __________________________
 
@@ -443,5 +437,3 @@ while True:
     pyautogui.click(240, 241)
     time.sleep(2)
     # ^ Sets B2 = FALSE in "Auto update status"
-
-    # GOD BLESS SVE, LONG LIVE AND PROSPER! IT VERKS!
